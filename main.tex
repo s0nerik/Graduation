@@ -14,6 +14,7 @@
 \usepackage{caption} % Table captions
 \usepackage{float} % Figure placing fix
 \usepackage{csquotes} % Needed for bibliography to work
+\usepackage{setspace} % Spacing support
 
 % Graphics support begin
 \usepackage{graphicx}
@@ -34,7 +35,7 @@
 }
 
 % Format settings
-\renewcommand{\baselinestretch}{1.5}
+\onehalfspacing
 
 % Caption formatting begin
 \renewcommand{\tablename}{Таблиця}
@@ -45,18 +46,16 @@
 % Title formats begin
 \titleformat{\chapter}[block]
   {\centering\normalfont\large\bfseries}{\thechapter}{1em}{\Large}
-\titlespacing*{\chapter}{0pt}{-19pt}{20pt}
+\titlespacing*{\chapter}{0pt}{0pt}{28pt}
+
+\titleformat{\section}[block]
+	{\normalfont\large\bfseries}{\thechapter}{1em}{\Large}
 % Title formats end
 
 % Definitions styling begin
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 % Definitions styling end
-
-% Table heading format begin
-% \newcommand*{\thead}[1]{\multicolumn{1}{c}{\bfseries #1}}
-% \renewcommand\theadfont{\bfseries\small}
-% Table heading format end
 
 \begin{document}
 
