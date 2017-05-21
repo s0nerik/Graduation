@@ -1,0 +1,70 @@
+\documentclass[a4paper, 14pt]{extreport}
+
+\usepackage{subfiles} % Multi-file setup support
+\usepackage[cm]{fullpage}
+\usepackage{amsmath,amsthm,amssymb} % Ukrainian support
+\usepackage[T1,T2A]{fontenc} % Ukrainian support
+\usepackage[utf8]{inputenc}  % Ukrainian support
+\usepackage[english, russian, ukrainian]{babel}  % Ukrainian support
+\usepackage{titlesec} % Page titles formatting support
+\usepackage{indentfirst} % Indent first paragraph of each chapter
+\usepackage{geometry} % Page margins formatting support
+\usepackage{amsthm} % Definition styles support
+\usepackage{makecell} % Table cell formatting support
+\usepackage{caption} % Table captions
+\usepackage{float} % Figure placing fix
+\usepackage{csquotes} % Needed for bibliography to work
+
+% Graphics support begin
+\usepackage{graphicx}
+\graphicspath{ {images/} }
+% Graphics support end
+
+% Bibliography setup begin
+\usepackage{biblatex} % Bibliography
+\addbibresource{main.bib} % Bibliography resource
+% Bibliography setup end
+
+\geometry{
+ a4paper,
+ left=25mm,
+ right=15mm,
+ top=20mm,
+ bottom=20mm,
+}
+
+% Format settings
+\renewcommand{\baselinestretch}{1.5}
+
+% Caption formatting begin
+\renewcommand{\tablename}{Таблиця}
+\DeclareCaptionLabelSeparator{hyphen}{ - }
+\captionsetup[table]{labelformat=simple, labelsep=hyphen}
+% Caption formatting end
+
+% Title formats begin
+\titleformat{\chapter}[block]
+  {\centering\normalfont\large\bfseries}{\thechapter}{1em}{\Large}
+\titlespacing*{\chapter}{0pt}{-19pt}{20pt}
+% Title formats end
+
+% Definitions styling begin
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+% Definitions styling end
+
+% Table heading format begin
+\renewcommand\theadfont{\bfseries\sffamily}
+% Table heading format end
+
+\begin{document}
+
+\subfile{sections/title}
+\tableofcontents
+\subfile{sections/0_intro}
+\subfile{sections/1}
+\subfile{sections/2}
+
+\printbibliography
+
+\end{document}
