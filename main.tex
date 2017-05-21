@@ -15,6 +15,19 @@
 \usepackage{float} % Figure placing fix
 \usepackage{csquotes} % Needed for bibliography to work
 \usepackage{setspace} % Spacing support
+\usepackage{libertine} % Better font
+\usepackage{fancyhdr} % Header type customization
+
+% Show page number in top-right corner
+\pagestyle{fancy}
+\fancyhf{}
+\fancyheadoffset[leh,roh]{0pt}
+\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\footrulewidth}{0pt}
+\fancypagestyle{plain}{
+	\fancyhf{}
+	\fancyhead[R]{\thepage}
+}
 
 % Graphics support begin
 \usepackage{graphicx}
@@ -40,14 +53,15 @@
 
 % Caption formatting begin
 \renewcommand{\tablename}{Таблиця}
-\DeclareCaptionLabelSeparator{hyphen}{ - }
+\DeclareCaptionLabelSeparator{hyphen}{ --- }
 \captionsetup[table]{labelformat=simple, labelsep=hyphen}
+\captionsetup[figure]{labelsep=hyphen}
 % Caption formatting end
 
 % Title formats begin
 \titleformat{\chapter}[block]
-  {\centering\bfseries\scshape}{\thechapter}{1em}{\normalsize}
-\titlespacing*{\chapter}{0pt}{14pt}{28pt}
+  {\centering\bfseries\scshape}{\thechapter}{1em}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{0pt}{28pt}
 
 \titleformat{\section}[block]
 	{\bfseries}{\thesection}{1em}{\normalsize}
@@ -65,6 +79,8 @@
 \newtheorem{definition}{Definition}[section]
 % Definitions styling end
 
+\rhead{\thepage}
+
 \begin{document}
 
 \subfile{sections/title}
@@ -72,6 +88,7 @@
 \subfile{sections/0_intro}
 \subfile{sections/1}
 \subfile{sections/2}
+\subfile{sections/3}
 
 \printbibliography
 
