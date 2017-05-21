@@ -3,7 +3,7 @@
 \usepackage{subfiles} % Multi-file setup support
 \usepackage[cm]{fullpage}
 \usepackage{amsmath,amsthm,amssymb} % Ukrainian support
-\usepackage[T1,T2A]{fontenc} % Ukrainian support
+\usepackage[T1, T2A]{fontenc} % Ukrainian support
 \usepackage[utf8]{inputenc}  % Ukrainian support
 \usepackage[english, russian, ukrainian]{babel}  % Ukrainian support
 \usepackage{titlesec} % Page titles formatting support
@@ -36,6 +36,7 @@
 
 % Format settings
 \onehalfspacing
+\setlength{\parindent}{1.25cm}
 
 % Caption formatting begin
 \renewcommand{\tablename}{Таблиця}
@@ -45,14 +46,18 @@
 
 % Title formats begin
 \titleformat{\chapter}[block]
-  {\centering\LARGE\bfseries}{\thechapter}{1em}{\LARGE}
-\titlespacing*{\chapter}{0pt}{0pt}{28pt}
+  {\centering\bfseries\scshape}{\thechapter}{1em}{\normalsize}
+\titlespacing*{\chapter}{0pt}{14pt}{28pt}
 
 \titleformat{\section}[block]
-	{\Large\bfseries}{\thesection}{1em}{\Large}
+	{\bfseries}{\thesection}{1em}{\normalsize}
+\titlespacing*{\section} {\parindent}{28pt}{28pt}
 
 \titleformat{\subsection}[block]
-	{\large\bfseries}{\thesubsection}{1em}{\large}
+	{\bfseries}{\thesubsection}{1em}{\normalsize}
+\titlespacing*{\subsection} {\parindent}{28pt}{28pt}
+
+\titlespacing*{\subsubsection} {\parindent}{28pt}{28pt}
 % Title formats end
 
 % Definitions styling begin
