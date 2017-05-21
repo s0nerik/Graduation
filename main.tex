@@ -45,11 +45,14 @@
 
 % Title formats begin
 \titleformat{\chapter}[block]
-  {\centering\normalfont\large\bfseries}{\thechapter}{1em}{\Large}
+  {\centering\LARGE\bfseries}{\thechapter}{1em}{\LARGE}
 \titlespacing*{\chapter}{0pt}{0pt}{28pt}
 
 \titleformat{\section}[block]
-	{\normalfont\large\bfseries}{\thechapter}{1em}{\Large}
+	{\Large\bfseries}{\thesection}{1em}{\Large}
+
+\titleformat{\subsection}[block]
+	{\large\bfseries}{\thesubsection}{1em}{\large}
 % Title formats end
 
 % Definitions styling begin
