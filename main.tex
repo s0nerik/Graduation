@@ -108,6 +108,12 @@
 
 \rhead{\thepage}
 
+\widowpenalty=9999 % mainly prevents situations when only last line of paragraph goes to next page, but in emergengy situations it's still allowed
+\clubpenalty=9999 % mainly prevents situations when only first line of paragraph remains on current page but all others go to next page, but in emergengy situations it's still allowed
+
+
+\newenvironment{tableJustNowSureWholeOnSamePage}{\vspace{0.5\baselineskip plus 0.5\baselineskip}\noindent\begin{minipage}{\textwidth}\begin{center}}{\end{center}\end{minipage}\par\vspace{0.5\baselineskip plus 0.5\baselineskip}}
+
 \begin{document}
 
 \subfile{sections/title}
