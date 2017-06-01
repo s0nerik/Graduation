@@ -17,6 +17,19 @@
 \usepackage{setspace} % Spacing support
 \usepackage{libertine} % Better font
 \usepackage{fancyhdr} % Header type customization
+\usepackage{enumitem} % Lists manipulation
+
+\geometry{
+	a4paper,
+	includeheadfoot,
+	left=25mm,
+	right=15mm,
+	top=15mm, % should be 20, but fancyhdr makes everything ugly
+	bottom=15mm, % should be 20, but fancyhdr makes everything ugly
+}
+
+% Remove list margins
+\setlist{nosep}
 
 % Additional content counting begin
 \usepackage{totcount}
@@ -55,14 +68,6 @@
 \usepackage{biblatex} % Bibliography
 \addbibresource{main.bib} % Bibliography resource
 % Bibliography setup end
-
-\geometry{
- a4paper,
- left=25mm,
- right=15mm,
- top=20mm,
- bottom=20mm,
-}
 
 % Format settings
 \spacing{1.5}
