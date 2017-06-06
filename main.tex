@@ -110,6 +110,12 @@
 	\titlespacing*{\section} {\parindent}{28pt}{0pt}
 }
 
+% По-моему, это - бред, но Онищенко требует отсутствие жирности у подподпунктов
+% С таким форматом совсем не понятно, что это логическая секция...
+% После таких правок пропадает вообще какое-либо желание делать что-то не "на отцепись"
+\titleformat*{\subparagraph}{\normalsize}
+\titlespacing*{\subparagraph}{\parindent}{0pt}{1em}
+
 % Title formats end
 
 % Definitions styling begin
