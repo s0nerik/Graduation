@@ -29,8 +29,14 @@
 	bottom=15mm, % should be 20, but fancyhdr makes everything ugly
 }
 
+% Replace bullets with hyphens in lists
+\def\labelitemi{--}
+
 % Remove list margins
-\setlist{nosep}
+% \setlist{nosep}
+
+% Boris-oriented lists style
+\setlist{nosep, labelwidth=\parindent, labelindent=1.33\labelsep, leftmargin=0em, style=standard}
 
 % Additional content counting begin
 \usepackage{totcount}
